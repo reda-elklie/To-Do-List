@@ -1,0 +1,175 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    user-select: none;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    width: 600px;
+    height: 400px;
+    backdrop-filter: blur(200px);
+    padding: 5px 0px;
+    border: white solid 1px;
+    border-radius: 10px;
+    overflow: auto;
+}
+
+#add {
+    width: 100px;
+    height: 30px;
+    transition: all 300ms ease-in;
+    cursor: pointer;
+    background-color: transparent;
+    outline: 1px solid rgba(255, 255, 255, 0.062);
+    border: transparent;
+    border-radius: 10px;
+    color: white;
+}
+
+#add:hover {
+    background-color: rgba(51, 8, 8, 0.349);
+    color: rgb(180, 168, 168);
+    offset: 1px solid red;
+    border: transparent;
+}
+
+#input-task {
+    width: 200px;
+    height: 30px;
+    background-color: transparent;
+    border: transparent;
+    outline: 1px solid rgba(255, 255, 255, 0.062);
+    transition: all 200ms ease-in;
+    border-radius: 10px;
+}
+
+#input-task::placeholder {
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: white;
+    padding: 2px 5px;
+    text-transform: uppercase;
+}
+
+#input-task:focus {
+    background-color: transparent;
+    color: white;
+    text-transform: uppercase;
+    font-size: 10px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.inputs {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid silver;
+    backdrop-filter: blur;
+}
+
+.task {
+    background-color: transparent;
+    width: 85%;
+    margin: 5px 0 0 50px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    color: white;
+    transition: all 500ms ease-in-out;
+    animation: reda 300ms;
+}
+
+@keyframes reda {
+    20% {
+        background-color: rgb(88, 70, 70);
+        border-radius: 10px;
+        padding: 5px;
+    }
+    100% {
+        background-color: rgba(97, 52, 52, 0.377);
+        border-radius: 10px;
+    }
+}
+
+.task:hover {
+    backdrop-filter: blur(60000000px);
+}
+
+.task li {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex: 4;
+    font: 100;
+    text-transform: capitalize;
+    overflow: auto;
+    transition: all 500ms ease-in-out;
+}
+
+.checkTask:hover,
+.deleteTask:hover {
+    width: 60px;
+    height: 20px;
+    background-color: rgba(51, 8, 8, 0.349);
+    border: 1px solid red;
+    border-radius: 10px;
+    color: rgb(180, 168, 168);
+    text-decoration: none !important;
+}
+
+.deleteTask,
+.checkTask {
+    width: 60px;
+    height: 20px;
+    background-color: transparent;
+    border: 1px solid rgba(29, 3, 3, 0.192);
+    border-radius: 10px;
+    transition: all 300ms ease-in;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+    /* Width of the scrollbar */
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 10px;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    border-radius: 10px;
+}
